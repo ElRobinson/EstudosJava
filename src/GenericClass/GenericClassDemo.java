@@ -1,3 +1,5 @@
+package GenericClass;
+
 /**
  * Created by Luis on 23/11/2016.
  */

@@ -1,26 +1,26 @@
+package Thread;
+
 /**
  * Created by Luis on 23/11/2016.
  */
-public class RunnableDemo {
+public class ThreadDemo {
     public void startThreads(){
-        A obj1 = new A();
-        B obj2 = new B();
 
-        Thread threadObj1 = new Thread(obj1);
+        Thread threadObj1 = new AA();
         threadObj1.start();
 
-        Thread threadObj2 = new Thread(obj2);
+        Thread threadObj2 = new BB();
         threadObj2.start();
     }
 
     public static void main(String[] args){
-        RunnableDemo obj = new RunnableDemo();
+        ThreadDemo obj = new ThreadDemo();
 
         obj.startThreads();
     }
 }
 
-class A implements Runnable{
+class AA extends Thread{
 
     @Override
     public void run() {
@@ -32,7 +32,7 @@ class A implements Runnable{
     }
 }
 
-class B implements Runnable{
+class BB extends Thread{
 
     @Override
     public void run() {
